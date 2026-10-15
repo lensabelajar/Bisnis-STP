@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pembelajaran Interaktif 45 Menit: Bisnis, Pemasaran, dan STP</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
+<style>
+:root{--bg:#fafaf9;--card:#ffffff;--tx:#111111;--mu:#6b6b68;--pr:#111111;--ac:#111111;--ok:#1a7f4b;--no:#c2342b;--bd:#e5e5e2;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e0e0e;--card:#161616;--tx:#f2f2f0;--mu:#9a9a96;--pr:#f2f2f0;--ac:#f2f2f0;--ok:#4ade80;--no:#f87171;--bd:#2a2a28}}
+:root[data-theme="dark"]{--bg:#0e0e0e;--card:#161616;--tx:#f2f2f0;--mu:#9a9a96;--pr:#f2f2f0;--ac:#f2f2f0;--ok:#4ade80;--no:#f87171;--bd:#2a2a28}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:15.5px/1.65 "Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:760px;margin:0 auto;padding:20px 16px 48px}
+h1{font-size:1.15rem;margin:0;font-weight:600;letter-spacing:-.01em}
+h2{font-size:1.5rem;margin:28px 0 8px;font-weight:600;letter-spacing:-.02em}
+h3{font-size:.95rem;margin:0 0 6px;font-weight:600}
+.mu{color:var(--mu);font-size:.88rem}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;padding:12px 0 0;background:var(--bg);border-bottom:1px solid var(--bd)}
+.bar{display:flex;gap:12px;align-items:center}
+.clock{font:500 1rem ui-monospace,"SF Mono",Menlo,monospace;color:var(--tx);min-width:56px;text-align:right}
+.tabs{display:flex;gap:20px;overflow-x:auto;margin-top:10px}
+.tab{flex:0 0 auto;border:0;border-bottom:2px solid transparent;background:none;color:var(--mu);padding:8px 0;font:inherit;font-size:.85rem;cursor:pointer;text-align:left;white-space:nowrap}
+.tab b{font-weight:500;margin-right:6px}.tab.on{color:var(--tx);border-bottom-color:var(--tx)}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:20px;margin:16px 0}
+button.b{background:var(--tx);color:var(--bg);border:1px solid var(--tx);border-radius:8px;padding:10px 18px;font:inherit;font-size:.9rem;font-weight:500;cursor:pointer;transition:opacity .15s}
+button.b:hover{opacity:.82}
+button.b.s{background:transparent;color:var(--tx);border:1px solid var(--bd)}
+.grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.flip{border:1px solid var(--bd);border-radius:10px;padding:16px;cursor:pointer;background:var(--card);color:var(--tx);text-align:left;font:inherit;transition:border-color .15s}
+.flip:hover{border-color:var(--tx)}.flip b{font-weight:600}
+.flip.open{border-color:var(--tx)}.flip .back{display:none;margin-top:8px;color:var(--mu);font-size:.9rem}.flip.open .back{display:block}
+.opt{display:block;width:100%;text-align:left;margin:8px 0;padding:12px 14px;border:1px solid var(--bd);border-radius:8px;background:var(--card);color:var(--tx);font:inherit;cursor:pointer;transition:border-color .15s}
+.opt:not(:disabled):hover{border-color:var(--tx)}
+.opt.ok{border-color:var(--ok);color:var(--ok)}.opt.no{border-color:var(--no);color:var(--no)}
+.exp{display:none;margin-top:12px;padding-left:12px;border-left:2px solid var(--tx);color:var(--mu);font-size:.9rem}
+input,select,textarea{width:100%;padding:10px 12px;border:1px solid var(--bd);border-radius:8px;background:var(--card);color:var(--tx);font:inherit}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--tx)}
+label{display:block;font-weight:500;margin:14px 0 4px;font-size:.85rem}
+.row{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(170px,1fr))}
+.prog{height:2px;background:var(--bd);overflow:hidden}.prog i{display:block;height:100%;background:var(--tx);width:0;transition:width .4s}
+.pre{border:1px solid var(--bd);border-radius:8px;padding:12px;font-weight:500;background:var(--bg)}
+.chk label{display:flex;gap:10px;font-weight:400;align-items:flex-start;margin:10px 0;font-size:.92rem}.chk input{width:18px;height:18px;margin-top:3px;accent-color:var(--tx)}
+.tag{display:inline-block;color:var(--mu);border:1px solid var(--bd);border-radius:99px;padding:1px 10px;font-size:.75rem;font-weight:500;vertical-align:middle;margin-left:6px}
+section{display:none}section.on{display:block;animation:up .25s ease}
+@keyframes up{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+table{border-collapse:collapse;width:100%;font-size:.85rem;margin-top:10px}td,th{border-bottom:1px solid var(--bd);padding:8px 6px;text-align:left}
+.sc{font:600 2.4rem "Inter",system-ui;letter-spacing:-.03em}
+summary{cursor:pointer}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="top">
+ <div class="bar"><h1 style="flex:1">Bisnis &amp; STP</h1><span class="clock" id="clk">45:00</span><button class="b" id="go">Mulai</button></div>
+ <div class="prog" style="margin-top:6px"><i id="tp" style="background:var(--ac)"></i></div>
+ <div class="tabs" id="tabs"></div>
+</div>
+
+<div class="card"><div class="row">
+ <div><label for="nm">Nama</label><input id="nm" placeholder="Nama lengkap"></div>
+ <div><label for="ab">No. Absen</label><input id="ab" inputmode="numeric" placeholder="Contoh: 12"></div>
+ <div><label for="kl">Kelas</label><input id="kl" placeholder="XII BD ..."></div>
+</div></div>
+
+<!-- 1 MATERI -->
+<section id="p0" class="on">
+ <h2>1. Materi Inti <span class="tag">8 menit</span></h2>
+ <p class="mu">Ketuk setiap kartu untuk membuka isinya. Baca semuanya sebelum lanjut ke kuis.</p>
+ <div class="grid">
+  <button class="flip"><b>Model Bisnis</b><div class="back">Cara usaha menciptakan nilai, menyampaikan nilai, dan memperoleh pendapatan. Kerangka Business Model Canvas punya 8 unsur, dari Segmen Pelanggan sampai Biaya.</div></button>
+  <button class="flip"><b>Kebutuhan, Keinginan, Permintaan</b><div class="back">Permintaan = keinginan yang didukung kemampuan dan kesediaan membeli. Minat belum sama dengan transaksi.</div></button>
+  <button class="flip"><b>Nilai Pelanggan</b><div class="back">Nilai = Manfaat – Pengorbanan (uang, waktu dan tenaga, risiko). Kepuasan muncul saat pengalaman dibandingkan dengan harapan.</div></button>
+  <button class="flip"><b>5 Orientasi Bisnis</b><div class="back">Produksi → Produk → Penjualan → Pemasaran → Berorientasi Masyarakat. Fokus bergeser dari kepentingan internal ke kebutuhan pelanggan dan masyarakat.</div></button>
+  <button class="flip"><b>Klasifikasi Barang</b><div class="back">Convenience (sering dibeli, mudah), Shopping (dibandingkan), Specialty (preferensi kuat, usaha khusus), Unsought (tidak direncanakan).</div></button>
+  <button class="flip"><b>S: Segmentasi</b><div class="back">Membagi pasar menjadi kelompok yang serupa. Dasarnya: geografis (lokasi), demografis (usia, tahap hidup), psikografis (gaya hidup, nilai), dan perilaku (frekuensi, manfaat, respons promosi).</div></button>
+  <button class="flip"><b>T: Targeting</b><div class="back">Memilih segmen paling tepat. Uji dengan Segitiga Targeting: Profitabilitas, Potensi Pertumbuhan, Kemudahan Akses. Target harus realistis, terukur, dan bisa dilayani.</div></button>
+  <button class="flip"><b>P: Positioning</b><div class="back">Citra unik di benak pelanggan. Bukan apa yang dilakukan pada produk, tetapi pada pikiran calon konsumen. Contoh: Aqua, Tolak Angin.</div></button>
+ </div>
+ <div class="card"><b>Mini-tantangan:</b> urutan strategi yang benar adalah <b>Segmentasi → Targeting → Positioning</b>. Mengapa positioning tidak boleh didahulukan? Diskusikan 1 menit dengan teman sebangku.</div>
+ <button class="b" onclick="go(1)">Lanjut ke Kuis</button>
+</section>
+
+<!-- 2 KUIS -->
+<section id="p1">
+ <h2>2. Kuis Cepat <span class="tag">10 menit</span></h2>
+ <div class="bar"><span class="mu" id="qn" style="flex:1"></span><span class="mu" id="qs"></span></div>
+ <div class="prog"><i id="qp"></i></div>
+ <div class="card" id="qbox"></div>
+ <div class="card" id="qres" style="display:none"></div>
+</section>
+
+<!-- 3 PENUGASAN -->
+<section id="p2">
+ <h2>3. Misi: Rancang Strategi STP <span class="tag">20 menit</span></h2>
+ <p class="mu">Kerjakan secara mandiri atau berpasangan. Gunakan satu usaha dan jaga agar jawaban spesifik, tidak umum seperti "semua orang".</p>
+ <div class="card"><label for="us">Pilih usaha</label>
+  <select id="us"><option>Kedai minuman dekat sekolah</option><option>Usaha roti rumahan</option><option>Kafe anak muda</option><option>Toko online perlengkapan sekolah</option><option>Usaha pilihan sendiri</option></select>
+  <label for="usx">Jika usaha pilihan sendiri, tulis di sini</label><input id="usx" placeholder="Nama / jenis usaha"></div>
+
+ <div class="card"><h3>Langkah 1 — Segmentasi (pilah)</h3>
+  <label for="s1">Geografis: area mana yang terjangkau?</label><textarea id="s1" rows="2" placeholder="Contoh: radius 2 km dari sekolah, area perumahan..."></textarea>
+  <label for="s2">Demografis: kelompok usia atau tahap hidup apa?</label><textarea id="s2" rows="2"></textarea>
+  <label for="s3">Psikografis / perilaku: gaya hidup atau kebiasaan beli apa?</label><textarea id="s3" rows="2"></textarea></div>
+
+ <div class="card"><h3>Langkah 2 — Targeting (pilih)</h3>
+  <label for="t0">Segmen yang kamu pilih sebagai target</label><textarea id="t0" rows="2"></textarea>
+  <label for="t1">Profitabilitas: mengapa segmen ini menguntungkan?</label><textarea id="t1" rows="2"></textarea>
+  <label for="t2">Potensi pertumbuhan: mengapa pasarnya berkembang?</label><textarea id="t2" rows="2"></textarea>
+  <label for="t3">Kemudahan akses: bagaimana usaha menjangkaunya?</label><textarea id="t3" rows="2"></textarea></div>
+
+ <div class="card"><h3>Langkah 3 — Positioning (eksekusi)</h3>
+  <div class="row"><div><label for="p1i">Target</label><input id="p1i" placeholder="pelajar sekitar sekolah"></div>
+  <div><label for="p2i">Nama merek</label><input id="p2i"></div>
+  <div><label for="p3i">Kategori</label><input id="p3i" placeholder="minuman segar"></div></div>
+  <div class="row"><div><label for="p4i">Keunggulan utama</label><input id="p4i" placeholder="murah dan cepat"></div>
+  <div><label for="p5i">Pembanding / pesaing</label><input id="p5i" placeholder="kedai lain di sekitar"></div></div>
+  <label>Pernyataan positioning kamu</label><div class="pre" id="pv">Isi kolom di atas.</div></div>
+
+ <div class="card chk"><h3>Cek mandiri sebelum dikumpulkan</h3>
+  <label><input type="checkbox"> Segmen mencakup lokasi, usia/tahap hidup, dan kebiasaan, bukan "semua orang"</label>
+  <label><input type="checkbox"> Target dijelaskan dengan ketiga sudut Segitiga Targeting</label>
+  <label><input type="checkbox"> Target realistis, terukur, dan bisa dilayani usaha</label>
+  <label><input type="checkbox"> Positioning berfokus pada citra di pikiran konsumen, bukan sekadar fitur produk</label>
+  <label><input type="checkbox"> Urutan S → T → P konsisten (positioning sesuai target)</label>
+  <div class="mu" id="ck"></div></div>
+ <button class="b" onclick="go(3)">Lanjut ke Refleksi</button>
+</section>
+
+<!-- 4 REFLEKSI -->
+<section id="p3">
+ <h2>4. Refleksi &amp; Kumpul <span class="tag">7 menit</span></h2>
+ <div class="card">
+  <label for="r1">Satu hal baru yang saya pahami hari ini</label><textarea id="r1" rows="2"></textarea>
+  <label for="r2">Bagian yang masih membingungkan</label><textarea id="r2" rows="2"></textarea>
+  <label for="r3">Mengapa mengejar "semua orang" justru berisiko bagi usaha?</label><textarea id="r3" rows="2"></textarea>
+  <div style="margin-top:12px"><button class="b" id="cp">Salin Hasil Saya</button> <span class="mu" id="cpm"></span></div>
+  <p class="mu">Tempel hasil salinan ke platform yang ditentukan guru (LMS, WhatsApp, atau dokumen kelas).</p>
+ </div>
+ <details class="card"><summary><b>Rubrik penilaian guru</b> (total 100)</summary>
+  <table><tr><th>Aspek</th><th>Bobot</th><th>Indikator</th></tr>
+  <tr><td>Kuis</td><td>30</td><td>Skor kuis × 30 / 8</td></tr>
+  <tr><td>Segmentasi</td><td>20</td><td>Tiga dasar terisi spesifik dan relevan</td></tr>
+  <tr><td>Targeting</td><td>20</td><td>Alasan sesuai Segitiga Targeting, operasional</td></tr>
+  <tr><td>Positioning</td><td>20</td><td>Pernyataan jelas, selaras dengan target</td></tr>
+  <tr><td>Refleksi</td><td>10</td><td>Jujur dan menunjukkan pemahaman</td></tr></table></details>
+</section>
+</div>
+
+<script>
+var Q=[
+["Model bisnis menjelaskan hal berikut, kecuali ...",["Cara menciptakan nilai","Cara menyampaikan nilai","Cara memperoleh pendapatan","Daftar iklan yang akan dipasang saja"],3,"Model bisnis mencakup penciptaan nilai, penyampaian nilai, dan perolehan pendapatan. Ia bukan sekadar promosi."],
+["Banyak siswa mengaku tertarik minuman rendah gula. Kesimpulan yang tepat ...",["Permintaan sudah terbukti","Minat belum membuktikan permintaan","Produk pasti laku","Harga tidak perlu diuji"],1,"Permintaan butuh kemampuan dan kesediaan membeli. Uji dengan transaksi nyata."],
+["Harga murah, tetapi antrean panjang. Dalam rumus Nilai = Manfaat – Pengorbanan, yang naik adalah ...",["Manfaat","Pengorbanan (waktu)","Pendapatan","Mitra"],1,"Waktu yang hilang menambah pengorbanan, sehingga nilai bagi pelanggan turun."],
+["Perusahaan fokus pada promosi agresif dan transaksi jangka pendek. Orientasinya ...",["Produksi","Produk","Penjualan","Pemasaran"],2,"Itu orientasi penjualan. Risikonya: tekanan promosi merusak kepercayaan."],
+["Jam tangan model tertentu yang dicari konsumen dengan usaha khusus termasuk barang ...",["Convenience","Shopping","Specialty","Unsought"],2,"Specialty: preferensi kuat dan usaha khusus. Fokus pemasarannya diferensiasi dan merek."],
+["Membagi pasar menjadi pelanggan di sekitar sekolah dan area perumahan adalah segmentasi ...",["Geografis","Demografis","Psikografis","Perilaku"],0,"Dasarnya lokasi dan jangkauan layanan, yaitu geografis."],
+["Kedai menyatakan \"target kami semua orang\". Kritik yang paling tepat ...",["Sudah ideal","Terlalu umum dan sulit dieksekusi","Menambah profit pasti","Tidak perlu data"],1,"Target harus jelas, terukur, dan bisa dilayani. Uji dengan Segitiga Targeting."],
+["Positioning yang paling tepat dimaknai sebagai ...",["Mengubah kemasan produk","Menurunkan harga","Citra unik di benak pelanggan dibanding pesaing","Memilih lokasi usaha"],2,"Positioning adalah apa yang dilakukan pada pikiran calon konsumen. Contoh: Aqua identik dengan air mineral."]
+];
+var qi=0,sc=0,ans=[];
+function rq(){
+ if(qi>=Q.length){document.getElementById('qbox').style.display='none';var r=document.getElementById('qres');r.style.display='block';
+  r.innerHTML='<div class="sc">Skor: '+sc+' / '+Q.length+'</div><p>'+(sc>=7?'Keren banget! Lanjut ke misi.':sc>=5?'Lumayan! Cek lagi kartu materi yang masih keliru.':'Gas ulang kartu materinya dulu, lalu coba lagi!')+'</p><button class="b s" onclick="rst()">Ulangi kuis</button> <button class="b" onclick="go(2)">Lanjut ke Misi</button>';
+  document.getElementById('qp').style.width='100%';return}
+ var q=Q[qi],h='<b>'+q[0]+'</b>';
+ q[1].forEach(function(o,i){h+='<button class="opt" data-i="'+i+'">'+String.fromCharCode(65+i)+'. '+o+'</button>'});
+ h+='<div class="exp" id="ex">'+q[3]+'</div><div style="margin-top:8px"><button class="b" id="nx" style="display:none">'+(qi==Q.length-1?'Lihat hasil':'Soal berikutnya')+'</button></div>';
+ var b=document.getElementById('qbox');b.style.display='block';b.innerHTML=h;document.getElementById('qres').style.display='none';
+ document.getElementById('qn').textContent='Soal '+(qi+1)+' dari '+Q.length;document.getElementById('qs').textContent='Skor: '+sc;
+ document.getElementById('qp').style.width=(qi/Q.length*100)+'%';
+ var os=b.querySelectorAll('.opt');os.forEach(function(o){o.onclick=function(){var k=+o.dataset.i;
+  os.forEach(function(x){x.disabled=true});os[q[2]].classList.add('ok');if(k==q[2])sc++;else o.classList.add('no');
+  document.getElementById('ex').style.display='block';document.getElementById('nx').style.display='inline-block';
+  document.getElementById('qs').textContent='Skor: '+sc;document.getElementById('nx').onclick=function(){qi++;rq()}}});
+}
+function rst(){qi=0;sc=0;rq()}
+var T=['Materi · 8\'','Kuis · 10\'','Misi · 20\'','Refleksi · 7\''];
+var cur=0;
+function go(n){cur=n;document.querySelectorAll('section').forEach(function(s,i){s.classList.toggle('on',i==n)});
+ document.querySelectorAll('.tab').forEach(function(t,i){t.classList.toggle('on',i==n)});window.scrollTo(0,0)}
+document.getElementById('tabs').innerHTML=T.map(function(t,i){return '<button class="tab'+(i?'':' on')+'" onclick="go('+i+')"><b>'+t.split(' · ')[0]+'</b>'+t.split(' · ')[1]+' menit</button>'}).join('');
+document.querySelectorAll('.flip').forEach(function(f){f.onclick=function(){f.classList.toggle('open')}});
+var tot=45*60,left=tot,iv=null;
+function ck(){var m=Math.floor(left/60),s=left%60;document.getElementById('clk').textContent=(m<10?'0':'')+m+':'+(s<10?'0':'')+s;document.getElementById('tp').style.width=((tot-left)/tot*100)+'%'}
+document.getElementById('go').onclick=function(){var b=this;
+ if(iv){clearInterval(iv);iv=null;b.textContent='Lanjut';return}
+ b.textContent='Jeda';iv=setInterval(function(){if(left>0){left--;ck()}else{clearInterval(iv);document.getElementById('clk').textContent='Waktu habis'}},1000)};
+ck();
+function pv(){var g=function(i){return document.getElementById(i).value.trim()||'…'};
+ document.getElementById('pv').textContent='Bagi '+g('p1i')+', '+g('p2i')+' adalah '+g('p3i')+' yang '+g('p4i')+' dibandingkan '+g('p5i')+'.'}
+['p1i','p2i','p3i','p4i','p5i'].forEach(function(i){document.getElementById(i).oninput=pv});
+var cbs=document.querySelectorAll('.chk input');
+cbs.forEach(function(c){c.onchange=function(){var n=document.querySelectorAll('.chk input:checked').length;document.getElementById('ck').textContent=n+' dari 5 kriteria terpenuhi'+(n==5?' — siap dikumpulkan!':'')}});
+document.getElementById('cp').onclick=function(){
+ var v=function(i){return document.getElementById(i).value.trim()},u=v('us')+(v('usx')?' ('+v('usx')+')':'');
+ var t='HASIL PEMBELAJARAN 45 MENIT: BISNIS, PEMASARAN & STP\nNama: '+v('nm')+' | No. Absen: '+v('ab')+' | Kelas: '+v('kl')+'\nSkor kuis: '+sc+'/'+Q.length+'\nUsaha: '+u+
+ '\n\nSEGMENTASI\nGeografis: '+v('s1')+'\nDemografis: '+v('s2')+'\nPsikografis/perilaku: '+v('s3')+
+ '\n\nTARGETING\nTarget: '+v('t0')+'\nProfitabilitas: '+v('t1')+'\nPotensi pertumbuhan: '+v('t2')+'\nKemudahan akses: '+v('t3')+
+ '\n\nPOSITIONING\n'+document.getElementById('pv').textContent+
+ '\n\nREFLEKSI\n1) '+v('r1')+'\n2) '+v('r2')+'\n3) '+v('r3');
+ var m=document.getElementById('cpm');
+ try{navigator.clipboard.writeText(t).then(function(){m.textContent='Tersalin!'},function(){fb(t,m)})}catch(e){fb(t,m)}};
+function fb(t,m){var a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();try{document.execCommand('copy');m.textContent='Tersalin!'}catch(e){m.textContent='Gagal menyalin, salin manual.'}a.remove()}
+rq();
+</script>
+</body>
+</html>
